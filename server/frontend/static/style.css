@@ -124,3 +124,22 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+
+.contact-container {
+    height: 100vh; /* Hace que el contenido ocupe toda la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.contact-image {
+    width: 200px; /* Fija el ancho de la imagen */
+    height: 200px; /* Fija la altura de la imagen */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+}
+.contact-box {
+    width: 100%;
+    max-width: 500px;
+}
