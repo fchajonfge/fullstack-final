@@ -26,6 +26,7 @@ logger = logging.getLogger(__name__)
 
 # Create a `login_request` view to handle sign in request
 @csrf_exempt
+
 def login_user(request):
     # Get username and password from request.POST dictionary
     data = json.loads(request.body)
@@ -40,6 +41,7 @@ def login_user(request):
         data = {"userName": username, "status": "Authenticated"}
     return JsonResponse(data)
 
+
 # Create a `logout_request` view to handle sign out request
 def logout_user(request):
     if request.user.is_authenticated:
@@ -49,6 +51,7 @@ def logout_user(request):
     else:
         return JsonResponse({"error": "User is not authenticated"}, status=400)
     
+
 
 # Create a `registration` view to handle sign up request
 @csrf_exempt
@@ -79,6 +82,7 @@ def register(request):
         return JsonResponse(data)
     else :
         data = {"userName":username,"error":"Already Registered"}
+
         return JsonResponse(data)
 
 #Update the `get_dealerships` render list of dealerships all by default, particular state if state is passed
